@@ -303,6 +303,7 @@ body {
 .gallery img {
     margin-top: 12px;
     vertical-align: middle;
+    width: 100%;
 }
 
 .hidden {
