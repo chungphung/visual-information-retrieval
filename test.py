@@ -6,15 +6,14 @@ from functools import update_wrapper
 from os.path import basename, exists, join
 
 import cv2
-from flask import (Flask, current_app, jsonify, make_response, request,
-                   send_file)
 from werkzeug.utils import secure_filename
 
 from colordescriptor import ColorDescriptor
 from edge import Edge
+from flask import (Flask, current_app, jsonify, make_response, request,
+                   send_file)
 from PathConfig import FilePaths
 from searcher import Searcher
-import multiprocessing
 
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app = Flask(__name__)
@@ -109,18 +108,6 @@ def crossdomain(origin=None, methods=None, headers=None, max_age=21600,
         return update_wrapper(wrapped_function, f)
 
     return decorator
-
-
-def feature_extration(imagePath):
-    imageID = basename(imagePath)
-    image = cv2.imread(imagePath)
-
-    # describe the image
-    features = desc.describe(image)
-
-    # write the features to file
-    features = [str(f) for f in features]
-    return
 
 
 def index_data(idx_file, desc):
