@@ -1,4 +1,4 @@
-from test import *
+from API_Backend.Helpers.function import *
 
 # send multiple images
 # https://stackoverflow.com/questions/44728047/return-multiple-image-files-with-flask

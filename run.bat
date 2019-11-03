@@ -1,3 +1,4 @@
 @echo off
-"%~dp0/venv/Scripts/python" "%~dp0\check_index.py"
-"%~dp0/venv/Scripts/python" "%~dp0\api.py"
+start "" "%~dp0/Index.html"
+"%~dp0/venv/Scripts/python" "%~dp0\Extract_features.py"
+"%~dp0/venv/Scripts/python" "%~dp0\Api.py"
