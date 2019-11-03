@@ -6,7 +6,6 @@ import cv2
 from API_Backend.Helpers.function import *
 from API_Backend.Helpers.PathConfig import *
 
-# sys.path.append(os.path.realpath(__file__))
 root_path = dirname(os.path.realpath(__file__))
 GT_folder = FilePaths.groundtruth
 for query_file in glob.glob(join(GT_folder, '*_query.txt')):
