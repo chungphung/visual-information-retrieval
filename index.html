@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="Stylesheet" type="text/css" href="web/croppie.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="web/style.css" />
+
 </head>
 
 <body>
@@ -34,7 +36,7 @@
                                 <strong>Or</strong>
                                 <span class="ml-3">Drag & drop an image here</span>
                             </div>
-                            <input type="file" id="uploadImg" title="" onchange="readUrl(this)"
+                            <input type="file" id="uploadImg" title=""
                                 accept="image/jpg, image/jpeg, image/png" name="file" />
                         </div>
                     </div>
@@ -53,6 +55,19 @@
                     <button id="btn-search">Search</button>
                 </div>
             </div>
+            <div class="align-items-center mx-auto">
+                <div class="demo-wrap upload-demo">
+                    <div class="container">
+                            <div class="upload-msg">
+                                Upload a file to start cropping
+                            </div>
+                            <div class="upload-demo-wrap">
+                                <div id="upload-demo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container-fluid gallery mt-4">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_0"></div>
@@ -67,7 +82,7 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script  type="text/javascript" src="web/croppie.js"></script>
     <!-- Custom scripts for this template -->
     <script type="text/javascript" src="web/main.js"></script>
 

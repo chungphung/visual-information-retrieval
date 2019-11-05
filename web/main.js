@@ -1,5 +1,6 @@
 $(document).ready(function() {
     Loading.init();
+    demoUpload();
     /* Select Filter Option */
     $(document).on("click", '#select-option', function(e) {
         $('#select-option .options').toggleClass('open');
@@ -47,7 +48,7 @@ $(document).ready(function() {
 });
 const URLAPI = 'http://127.0.0.1:8080/search';
 const METHOD = 'POST';
-/* Upload Image by Input File */
+/* Upload Image by Input File 
 function readUrl(inputFile) {
     var elementPreviewImage = $(inputFile).parent().siblings('.preview');
     var previewImg = elementPreviewImage.children('.img');
@@ -67,7 +68,7 @@ function readUrl(inputFile) {
         reader.readAsDataURL(inputFile.files[0]);
         $(inputFile).data("valid", 1);
     }
-};
+};*/
 /* End. Upload Image by Input File */
 
 // Clear Form Input
@@ -121,3 +122,55 @@ var Loading = (function Loading() {
         hide: hide,
     };
 })();
+function demoUpload() {
+    var $uploadCrop;
+
+    function readFile(inputFile) {
+        var elementPreviewImage = $(inputFile).parent().siblings('.preview');
+        var previewImg = elementPreviewImage.children('.img');
+        var previewName = elementPreviewImage.children('.name');
+        var btnChange = $(inputFile).parent().siblings('label');
+
+        if (inputFile.files && inputFile.files[0]) {
+            var reader = new FileReader();
+            reader.onload = (e) => {
+                var imgData = e.target.result;
+                var imgName = inputFile.files[0].name;
+                previewImg.html('<img src="' + imgData + '" />').addClass('show');
+                previewName.text(imgName);
+                btnChange.text('Change').removeClass('upload-image').addClass('change-image');
+                $(inputFile).siblings('.dragBox-text').addClass("d-none");
+
+                $('.upload-demo').addClass('ready');
+                $uploadCrop.croppie('bind', {
+                    url: imgData
+                }).then(function(){
+                    console.log('jQuery bind complete');
+                });
+            }
+            reader.readAsDataURL(inputFile.files[0]);
+            $(inputFile).data("valid", 1);
+        }
+    }
+
+    $uploadCrop = $('#upload-demo').croppie({
+        viewport: {
+            width: 100,
+            height: 100,
+            
+        },
+        enableExif: true
+    });
+
+    $('#uploadImg').on('change', function () { readFile(this); });
+    $('.upload-result').on('click', function (ev) {
+        $uploadCrop.croppie('result', {
+            type: 'canvas',
+            size: 'viewport'
+        }).then(function (resp) {
+            popupResult({
+                src: resp
+            });
+        });
+    });
+}

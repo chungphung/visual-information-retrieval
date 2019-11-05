@@ -181,6 +181,46 @@ body {
     cursor: pointer;
 }
 
+.upload-demo {
+    margin-top: 20px;
+}
+.upload-demo .upload-demo-wrap,
+.upload-demo .upload-result,
+.upload-demo.ready .upload-msg {
+    display: none;
+}
+.upload-demo.ready .upload-demo-wrap {
+    display: block;
+}
+.upload-demo.ready .upload-result {
+    display: inline-block;    
+}
+.upload-demo-wrap {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 2px dashed #bbb;
+    transition: transform 0.3s;
+    border-radius: 5px;
+    background-color: transparent;
+    align-items: center;
+}
+
+.upload-msg {
+    text-align: center;
+    padding: 50px;
+    font-size: 22px;
+    color: #aaa;
+    width: 260px;
+    margin: 50px auto;
+    /* width: 300px;
+    height: 300px; */
+    border: 2px dashed #bbb;
+    transition: transform 0.3s;
+    border-radius: 5px;
+    background-color: transparent;
+    align-items: center;
+}
 
 /* End.Custom Input file */
 
