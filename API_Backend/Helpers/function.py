@@ -1,6 +1,4 @@
-import argparse
 import glob
-import json
 from datetime import timedelta
 from functools import update_wrapper
 from os.path import basename, exists
@@ -10,7 +8,7 @@ from flask import (Flask, current_app, jsonify, make_response, request,
                    send_file)
 from werkzeug.utils import secure_filename
 
-from API_Backend.Helpers.colordescriptor import ColorDescriptor
+from API_Backend.Helpers.color import Color
 from API_Backend.Helpers.edge import Edge
 from API_Backend.Helpers.PathConfig import *
 from API_Backend.Helpers.searcher import Searcher
@@ -20,7 +18,8 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = FilePaths.upload
 
 # initialize the image descriptor
-cd = ColorDescriptor((8, 12, 3))
+cd = Color((8, 12, 3))
+# cd = Color((10, 14, 5))
 ed = Edge()
 
 
@@ -153,18 +152,15 @@ def get_image_path(results):
 
 
 def find_image(query, mode):
-
-    # load the query image and describe it
-    color_features = cd.describe(query)
-    edge_features = ed.describe(query)
-
     # perform the search
     if mode == 'color':
+        color_features = cd.describe(query)
         color_searcher = Searcher(FilePaths.color_index)
         color_results = color_searcher.search(color_features)
         paths = get_image_path(color_results)
     elif mode == 'edge':
+        edge_features = ed.describe(query)
         edge_searcher = Searcher(FilePaths.edge_index)
-        edge_results = edge_searcher.search(edge_features)
+        edge_results = edge_searcher.search(edge_features, algo='cosine')
         paths = get_image_path(edge_results)
     return paths

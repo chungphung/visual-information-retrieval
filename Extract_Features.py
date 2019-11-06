@@ -6,11 +6,12 @@ from os.path import basename, exists, join
 
 import cv2
 
-from API_Backend.Helpers.colordescriptor import ColorDescriptor
+from API_Backend.Helpers.color import Color
 from API_Backend.Helpers.edge import Edge
 from API_Backend.Helpers.PathConfig import FilePaths
 
-cd = ColorDescriptor((8, 12, 3))
+cd = Color((8, 12, 3))
+# cd = Color((16, 24, 6))
 ed = Edge()
 
 

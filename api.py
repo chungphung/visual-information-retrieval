@@ -1,5 +1,6 @@
-from API_Backend.Helpers.function import *
+import json
 
+from API_Backend.Helpers.function import *
 
 update_corpus()
 

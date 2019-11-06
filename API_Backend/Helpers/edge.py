@@ -18,6 +18,8 @@ class Edge:
                 [0, sqrt(2)], [-sqrt(2), 0]],
             [  # non-directional
                 [2, -2], [-2, 2]]])
+        # self.edge_kernels = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]])
+        
 
         self.stride = (1, 1)
         self.n_slice = 10
@@ -26,6 +28,8 @@ class Edge:
         H, W, C = img.shape
         conv_kernels = np.expand_dims(kernels, axis=3)
         conv_kernels = np.tile(conv_kernels, (1, 1, 1, C))
+        # print(list(conv_kernels.shape), list(
+        #     kernels.shape) + [C])
         assert list(conv_kernels.shape) == list(
             kernels.shape) + [C]  # check kernels size
 
@@ -56,14 +60,14 @@ class Edge:
         height, width, channel = img.shape
         hist = np.zeros((self.n_slice, self.n_slice,
                          self.edge_kernels.shape[0]))
-        h_silce = np.around(np.linspace(
-            0, height, self.n_slice+1, endpoint=True)).astype(int)
+        h_slice = np.around(np.linspace(
+            0, height, self.n_slice + 1, endpoint=True)).astype(int)
         w_slice = np.around(np.linspace(
-            0, width, self.n_slice+1, endpoint=True)).astype(int)
+            0, width, self.n_slice + 1, endpoint=True)).astype(int)
 
-        for hs in range(len(h_silce)-1):
+        for hs in range(len(h_slice)-1):
             for ws in range(len(w_slice)-1):
-                img_r = img[h_silce[hs]:h_silce[hs+1], w_slice[ws]:w_slice[ws+1]]  # slice img to regions
+                img_r = img[h_slice[hs]:h_slice[hs+1], w_slice[ws]:w_slice[ws+1]]  # slice img to regions
                 hist[hs][ws] = self._conv(
                     img_r, stride=self.stride, kernels=self.edge_kernels)
 

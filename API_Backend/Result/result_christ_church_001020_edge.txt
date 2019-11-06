@@ -18,3 +18,8 @@ all_souls_000018
 all_souls_000019
 all_souls_000020
 all_souls_000021
+all_souls_000022
+all_souls_000026
+all_souls_000027
+all_souls_000028
+all_souls_000029

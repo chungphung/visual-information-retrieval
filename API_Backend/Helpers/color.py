@@ -4,7 +4,7 @@ import numpy as np
 import imutils
 
 
-class ColorDescriptor:
+class Color:
     def __init__(self, bins):
         self.bins = bins
 

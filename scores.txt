@@ -1,47 +1,47 @@
 result_all_souls_000013_color.txt all_souls_1_query.txt
-0.0158575
+0.0136334
 result_all_souls_000013_edge.txt all_souls_1_query.txt
-0.00633555
+0.014627
 result_all_souls_000026_color.txt all_souls_2_query.txt
-0.0364473
+0.0347791
 result_all_souls_000026_edge.txt all_souls_2_query.txt
-0
+0.0137085
 result_oxford_002985_color.txt all_souls_3_query.txt
-0.0233294
+0.0154877
 result_oxford_002985_edge.txt all_souls_3_query.txt
-0.00336538
+0
 result_all_souls_000051_color.txt all_souls_4_query.txt
-0.113287
+0.109795
 result_all_souls_000051_edge.txt all_souls_4_query.txt
-0.00327635
+0.0128205
 result_oxford_003410_color.txt all_souls_5_query.txt
 0.025641
 result_oxford_003410_edge.txt all_souls_5_query.txt
-0.00145824
+0.00106838
 result_ashmolean_000058_color.txt ashmolean_1_query.txt
-0.0802106
+0.0778548
 result_ashmolean_000058_edge.txt ashmolean_1_query.txt
-0
+0.04
 result_ashmolean_000000_color.txt ashmolean_2_query.txt
-0.0506667
+0.08
 result_ashmolean_000000_edge.txt ashmolean_2_query.txt
-0
+0.04
 result_ashmolean_000269_color.txt ashmolean_3_query.txt
-0.0529739
+0.0493906
 result_ashmolean_000269_edge.txt ashmolean_3_query.txt
-0
+0.0487273
 result_ashmolean_000007_color.txt ashmolean_4_query.txt
-0.0682381
+0.0425362
 result_ashmolean_000007_edge.txt ashmolean_4_query.txt
-0
+0.04
 result_ashmolean_000305_color.txt ashmolean_5_query.txt
-0.0490476
+0.04
 result_ashmolean_000305_edge.txt ashmolean_5_query.txt
-0.00333333
+0.04
 result_balliol_000051_color.txt balliol_1_query.txt
 0.166667
 result_balliol_000051_edge.txt balliol_1_query.txt
-0
+0.0833333
 result_balliol_000187_color.txt balliol_2_query.txt
 0.0833333
 result_balliol_000187_edge.txt balliol_2_query.txt
@@ -51,55 +51,55 @@ result_balliol_000167_color.txt balliol_3_query.txt
 result_balliol_000167_edge.txt balliol_3_query.txt
 0
 result_balliol_000194_color.txt balliol_4_query.txt
-0.0833333
+0.102183
 result_balliol_000194_edge.txt balliol_4_query.txt
-0
+0.00189394
 result_oxford_001753_color.txt balliol_5_query.txt
 0.0833333
 result_oxford_001753_edge.txt balliol_5_query.txt
 0
 result_bodleian_000107_color.txt bodleian_1_query.txt
-0.0416667
+0.0984251
 result_bodleian_000107_edge.txt bodleian_1_query.txt
 0
 result_oxford_002416_color.txt bodleian_2_query.txt
-0.0812771
+0.0978756
 result_oxford_002416_edge.txt bodleian_2_query.txt
-0.00109649
+0.00520833
 result_bodleian_000108_color.txt bodleian_3_query.txt
-0.104554
+0.11701
 result_bodleian_000108_edge.txt bodleian_3_query.txt
-0.0142794
+0.0416667
 result_bodleian_000407_color.txt bodleian_4_query.txt
 0.0416667
 result_bodleian_000407_edge.txt bodleian_4_query.txt
-0
+0.0416667
 result_bodleian_000163_color.txt bodleian_5_query.txt
 0.0416667
 result_bodleian_000163_edge.txt bodleian_5_query.txt
-0.00189394
+0.0416667
 result_christ_church_000179_color.txt christ_church_1_query.txt
-0.0148148
+0.0128205
 result_christ_church_000179_edge.txt christ_church_1_query.txt
-0
+0.0128205
 result_oxford_002734_color.txt christ_church_2_query.txt
-0.0175829
+0.0442832
 result_oxford_002734_edge.txt christ_church_2_query.txt
 0
 result_christ_church_000999_color.txt christ_church_3_query.txt
-0.0278388
+0.0202991
 result_christ_church_000999_edge.txt christ_church_3_query.txt
-0
+0.0181624
 result_christ_church_001020_color.txt christ_church_4_query.txt
 0.0128205
 result_christ_church_001020_edge.txt christ_church_4_query.txt
 0
 result_oxford_002562_color.txt christ_church_5_query.txt
-0.014627
+0.0150463
 result_oxford_002562_edge.txt christ_church_5_query.txt
 0
 result_cornmarket_000047_color.txt cornmarket_1_query.txt
-0.251235
+0.273384
 result_cornmarket_000047_edge.txt cornmarket_1_query.txt
 0
 result_cornmarket_000105_color.txt cornmarket_2_query.txt
@@ -107,47 +107,47 @@ result_cornmarket_000105_color.txt cornmarket_2_query.txt
 result_cornmarket_000105_edge.txt cornmarket_2_query.txt
 0
 result_cornmarket_000019_color.txt cornmarket_3_query.txt
-0.137554
+0.130401
 result_cornmarket_000019_edge.txt cornmarket_3_query.txt
 0
 result_oxford_000545_color.txt cornmarket_4_query.txt
-0.222222
+0.244302
 result_oxford_000545_edge.txt cornmarket_4_query.txt
 0
 result_cornmarket_000131_color.txt cornmarket_5_query.txt
-0.175926
+0.222222
 result_cornmarket_000131_edge.txt cornmarket_5_query.txt
-0
+0.111111
 result_hertford_000015_color.txt hertford_1_query.txt
-0.037037
+0.029321
 result_hertford_000015_edge.txt hertford_1_query.txt
-0
+0.0185185
 result_oxford_001752_color.txt hertford_2_query.txt
-0.0213992
+0.0282401
 result_oxford_001752_edge.txt hertford_2_query.txt
-0
+0.000617284
 result_oxford_000317_color.txt hertford_3_query.txt
-0.0227072
+0.024537
 result_oxford_000317_edge.txt hertford_3_query.txt
-0
+0.0106785
 result_hertford_000027_color.txt hertford_4_query.txt
-0.0555556
+0.0632615
 result_hertford_000027_edge.txt hertford_4_query.txt
-0.00611869
+0.0196451
 result_hertford_000063_color.txt hertford_5_query.txt
-0.0262346
+0.029321
 result_hertford_000063_edge.txt hertford_5_query.txt
 0
 result_keble_000245_color.txt keble_1_query.txt
-0.22619
+0.142857
 result_keble_000245_edge.txt keble_1_query.txt
 0
 result_keble_000214_color.txt keble_2_query.txt
-0.170918
+0.142857
 result_keble_000214_edge.txt keble_2_query.txt
 0
 result_keble_000227_color.txt keble_3_query.txt
-0.142857
+0.155725
 result_keble_000227_edge.txt keble_3_query.txt
 0
 result_keble_000028_color.txt keble_4_query.txt
@@ -163,7 +163,7 @@ result_magdalen_000078_color.txt magdalen_1_query.txt
 result_magdalen_000078_edge.txt magdalen_1_query.txt
 0
 result_oxford_003335_color.txt magdalen_2_query.txt
-0.0204145
+0.0205535
 result_oxford_003335_edge.txt magdalen_2_query.txt
 0
 result_magdalen_000058_color.txt magdalen_3_query.txt
@@ -171,13 +171,13 @@ result_magdalen_000058_color.txt magdalen_3_query.txt
 result_magdalen_000058_edge.txt magdalen_3_query.txt
 0
 result_oxford_001115_color.txt magdalen_4_query.txt
-0.0440917
+0.0453289
 result_oxford_001115_edge.txt magdalen_4_query.txt
 0
 result_magdalen_000560_color.txt magdalen_5_query.txt
 0.0185185
 result_magdalen_000560_edge.txt magdalen_5_query.txt
-0
+0.0185185
 result_pitt_rivers_000033_color.txt pitt_rivers_1_query.txt
 0.166667
 result_pitt_rivers_000033_edge.txt pitt_rivers_1_query.txt
@@ -199,22 +199,22 @@ result_pitt_rivers_000058_color.txt pitt_rivers_5_query.txt
 result_pitt_rivers_000058_edge.txt pitt_rivers_5_query.txt
 0
 result_radcliffe_camera_000519_color.txt radcliffe_camera_1_query.txt
-0.0553069
+0.0283609
 result_radcliffe_camera_000519_edge.txt radcliffe_camera_1_query.txt
 0
 result_oxford_002904_color.txt radcliffe_camera_2_query.txt
-0.0383645
+0.017119
 result_oxford_002904_edge.txt radcliffe_camera_2_query.txt
-0.000323206
+9.04977e-05
 result_radcliffe_camera_000523_color.txt radcliffe_camera_3_query.txt
-0.0227165
+0.0229115
 result_radcliffe_camera_000523_edge.txt radcliffe_camera_3_query.txt
 0
 result_radcliffe_camera_000095_color.txt radcliffe_camera_4_query.txt
-0.00655811
+0.00644755
 result_radcliffe_camera_000095_edge.txt radcliffe_camera_4_query.txt
 0
 result_bodleian_000132_color.txt radcliffe_camera_5_query.txt
-0.0162784
+0.0109198
 result_bodleian_000132_edge.txt radcliffe_camera_5_query.txt
-0.000590144
+0.00485348

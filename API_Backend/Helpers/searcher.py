@@ -8,7 +8,7 @@ class Searcher:
     def __init__(self, indexPath):
         self.indexPath = indexPath
 
-    def search(self, queryFeatures, limit=20, algo='chi2'):
+    def search(self, queryFeatures, limit=25, algo='chi2'):
         results = {}
         with open(self.indexPath) as f:
             reader = csv.reader(f)

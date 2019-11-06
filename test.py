@@ -22,7 +22,7 @@ for query_file in glob.glob(join(GT_folder, '*_query.txt')):
             result = open(join(FilePaths.result, ret_file_name), 'w')
             for line in data_json:
                 result.write(line.replace(
-                    './data\\', '').replace('.jpg', '')+'\n')
+                    FilePaths.dataset+'\\', '').replace('.jpg', '')+'\n')
             result.close()
         print(ret_file_name, basename(query_file))
         os.system(FilePaths.exe + ' {} {}'.format(join(root_path, query_file.replace('_query.txt', '')),
