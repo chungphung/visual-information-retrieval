@@ -18,32 +18,40 @@ $(document).ready(function() {
     // Click Search 
     $(document).on("click", '#btn-search', function(e) {
         e.preventDefault();
-        var formData = new FormData();
-        formData.append('mode', $("input[name=mode]").val());
-        formData.append('file', $('input[type=file]')[0].files[0]); 
-        $.ajax({
-            contentType: false,
-            processData: false,
-            url: URLAPI,
-            type: METHOD,
-            data: formData,
-            beforeSend: function() {
-                clearImageResult();
-                Loading.show();
-            },
-            success: function(result) {
-                let obj = JSON.parse(result);
-                showImageResult(obj.data);
-            },
-            complete: function() {
-                Loading.hide();
-                //clearInputImage();
-                //clearSelectOption();
-            },
-            error: function(result) {
-                alert(result.status);
-            }
+        
+        $uploadCrop.croppie('result', {
+            type: 'rawcanvas',
+            format: 'png'
+        }).then(function (canvas) {
+            var formData = new FormData();
+            var fileImage = canvas.toDataURL();
+            formData.append('mode', $("input[name=mode]").val());
+            formData.append('file', fileImage); 
+            $.ajax({
+                contentType: false,
+                processData: false,
+                url: URLAPI,
+                type: METHOD,
+                data: formData,
+                beforeSend: function() {
+                    clearImageResult();
+                    Loading.show();
+                },
+                success: function(result) {
+                    let obj = JSON.parse(result);
+                    showImageResult(obj.data);
+                },
+                complete: function() {
+                    Loading.hide();
+                    //clearInputImage();
+                    //clearSelectOption();
+                },
+                error: function(result) {
+                    alert(result.status);
+                }
+            });
         });
+        
     });
 });
 const URLAPI = 'http://127.0.0.1:8080/search';
@@ -122,9 +130,8 @@ var Loading = (function Loading() {
         hide: hide,
     };
 })();
+var $uploadCrop;
 function demoUpload() {
-    var $uploadCrop;
-
     function readFile(inputFile) {
         var elementPreviewImage = $(inputFile).parent().siblings('.preview');
         var previewImg = elementPreviewImage.children('.img');
@@ -157,7 +164,6 @@ function demoUpload() {
         viewport: {
             width: 100,
             height: 100,
-            
         },
         enableExif: true
     });
