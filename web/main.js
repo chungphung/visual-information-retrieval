@@ -137,6 +137,7 @@ function demoUpload() {
             width: 100,
             height: 100,
         },
+        enableResize: true,
         enableExif: true
     });
 
