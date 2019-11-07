@@ -1,63 +1,57 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Visual Information Retrieval</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="web/icon.ico" type="image/vnd.microsoft.icon">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="Stylesheet" type="text/css" href="web/croppie.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="web/style.css" />
-
-</head>
-
-<body>
-    <div class="layout">
-        <div class="content">
-            <h4 class="title text-center">Visual Information Retrieval</h4>
-            <input type="hidden" name="mode" value="color">
-            <div class="form-input d-flex justify-content-between align-items-center mx-auto">
-                <div class="input-file">
-                    <div class="uploadOuter position-relative">
-                        <div class="preview position-absolute">
-                            <div class="img position-relative">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Visual Information Retrieval</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="web/icon.ico" type="image/vnd.microsoft.icon">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="Stylesheet" type="text/css" href="web/croppie.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="web/style.css" />
+    </head>
+    <body>
+        <div class="layout">
+            <div class="content">
+                <h4 class="title text-center">Visual Information Retrieval</h4>
+                <input type="hidden" name="mode" value="color">
+                <div class="form-input d-flex justify-content-between align-items-center mx-auto">
+                    <div class="input-file">
+                        <div class="uploadOuter position-relative">
+                            <div class="preview position-absolute">
+                                <div class="img position-relative"></div>
+                                <div class="name"></div>
                             </div>
-                            <div class="name"></div>
-                        </div>
-
-                        <label for="uploadImg" class="upload-image">Upload</label>
-                        <div class="dragBox">
-
-                            <div class="dragBox-text">
-                                <strong>Or</strong>
-                                <span class="ml-3">Drag & drop an image here</span>
+                            <label for="uploadImg" class="upload-image">Upload</label>
+                            <div class="dragBox">
+                                <div class="dragBox-text">
+                                    <strong>Or</strong>
+                                    <span class="ml-3">Drag & drop an image here</span>
+                                </div>
+                                <input type="file" id="uploadImg" title=""
+                                    accept="image/jpg, image/jpeg, image/png" name="file" />
                             </div>
-                            <input type="file" id="uploadImg" title=""
-                                accept="image/jpg, image/jpeg, image/png" name="file" />
                         </div>
                     </div>
-                </div>
-                <div id="select-option" class="select-wrap position-relative">
-
-                    <div class="selected-option position-relative"><span class="placeholder" id="filter-value"
-                            data-option="0">Select option</span>
-                        <ul class="options">
-                            <li data-value="color">Color</li>
-                            <li data-value="edge">Edge</li>
-                        </ul>
+                    <div id="select-option" class="select-wrap position-relative">
+                        <div class="selected-option position-relative">
+                            <span class="placeholder" id="filter-value"
+                                data-option="0">Select option</span>
+                            <ul class="options">
+                                <li data-value="color">Color</li>
+                                <li data-value="edge">Edge</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button id="btn-search">Search</button>
                     </div>
                 </div>
-                <div class="action">
-                    <button id="btn-search">Search</button>
-                </div>
-            </div>
-            <div class="align-items-center mx-auto">
-                <div class="demo-wrap upload-demo">
-                    <div class="container">
+                <div class="align-items-center mx-auto">
+                    <div class="demo-wrap upload-demo">
+                        <div class="container">
                             <div class="upload-msg">
                                 Upload a file to start cropping
                             </div>
@@ -67,25 +61,22 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container-fluid gallery mt-4">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_0"></div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_1"></div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_2"></div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_3"></div>
+                <div class="container-fluid gallery mt-4">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_0"></div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_1"></div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_2"></div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-image" id="col_3"></div>
+                    </div>
                 </div>
             </div>
+            <div class="footer">
+                <span>Visual Information Retrieval</span>
+            </div>
         </div>
-        <div class="footer">
-            <span>Visual Information Retrieval</span>
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script  type="text/javascript" src="web/croppie.js"></script>
-    <!-- Custom scripts for this template -->
-    <script type="text/javascript" src="web/main.js"></script>
-
-</body>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script  type="text/javascript" src="web/croppie.js"></script>
+        <!-- Custom scripts for this template -->
+        <script type="text/javascript" src="web/main.js"></script>
+    </body>
 </html>
