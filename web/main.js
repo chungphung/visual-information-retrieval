@@ -18,15 +18,11 @@ $(document).ready(function() {
     // Click Search 
     $(document).on("click", '#btn-search', function(e) {
         e.preventDefault();
-        
-        $uploadCrop.croppie('result', {
-            type: 'rawcanvas',
-            format: 'png'
-        }).then(function (canvas) {
+        $uploadCrop.croppie('result', 'blob').then(function(blob) {
             var formData = new FormData();
-            var fileImage = canvas.toDataURL();
             formData.append('mode', $("input[name=mode]").val());
-            formData.append('file', fileImage); 
+            var fileImg = new File([blob], "file_img.png", {type: 'image/png'});
+            formData.append('file', fileImg); 
             $.ajax({
                 contentType: false,
                 processData: false,
@@ -51,34 +47,10 @@ $(document).ready(function() {
                 }
             });
         });
-        
     });
 });
 const URLAPI = 'http://127.0.0.1:8080/search';
 const METHOD = 'POST';
-/* Upload Image by Input File 
-function readUrl(inputFile) {
-    var elementPreviewImage = $(inputFile).parent().siblings('.preview');
-    var previewImg = elementPreviewImage.children('.img');
-    var previewName = elementPreviewImage.children('.name');
-    var btnChange = $(inputFile).parent().siblings('label');
-
-    if (inputFile.files && inputFile.files[0]) {
-        var reader = new FileReader();
-        reader.onload = (e) => {
-            var imgData = e.target.result;
-            var imgName = inputFile.files[0].name;
-            previewImg.html('<img src="' + imgData + '" />').addClass('show');
-            previewName.text(imgName);
-            btnChange.text('Change').removeClass('upload-image').addClass('change-image');
-            $(inputFile).siblings('.dragBox-text').addClass("d-none");
-        }
-        reader.readAsDataURL(inputFile.files[0]);
-        $(inputFile).data("valid", 1);
-    }
-};*/
-/* End. Upload Image by Input File */
-
 // Clear Form Input
 function clearInputImage() {
     var inputFile = $("div.uploadOuter").find("input[type='file']");
